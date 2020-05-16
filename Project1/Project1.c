@@ -1,6 +1,7 @@
 #include <stdio.h>
+#include "SDL.h"
 
-void main(int argc, char* argv[])
+int main(int argc, char* argv[])
 {
 
 }
