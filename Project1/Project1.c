@@ -3,6 +3,8 @@
 
 int main(int argc, char* argv[])
 {
+	int done = 0;
+	SDL_Event event;
 	SDL_Window* window;
 	SDL_Renderer* renderer;
 
@@ -11,18 +13,25 @@ int main(int argc, char* argv[])
 	window = SDL_CreateWindow("Project1", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 800, 600, 0);
 	renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
 
-	SDL_SetRenderDrawColor(renderer, 255, 255, 0, 255);
-	SDL_RenderClear(renderer);
-
-	SDL_SetRenderDrawColor(renderer, 127, 127, 127, 255);
-	SDL_Rect rect = {100, 100, 200, 200};
-	SDL_RenderFillRect(renderer, &rect);
-
-	SDL_RenderPresent(renderer);
-	SDL_Delay(3000);
+	while (!done)
+	{
+		while (SDL_PollEvent(&event))
+		{
+			switch (event.type)
+			{
+			case SDL_WINDOWEVENT_CLOSE:
+				break;
+			case SDL_KEYDOWN:
+				break;
+			case SDL_QUIT:
+				break;
+			}
+		}
+	}
 
 	SDL_DestroyWindow(window);
 	SDL_DestroyRenderer(renderer);
 	SDL_Quit();
 
+	return 0;
 }
