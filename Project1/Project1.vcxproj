@@ -145,6 +145,9 @@
   <ItemGroup>
     <ClCompile Include="Project1.c" />
   </ItemGroup>
+  <ItemGroup>
+    <Image Include="spritesheet.gif" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
