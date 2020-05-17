@@ -3,12 +3,11 @@
 
 int main(int argc, char* argv[])
 {
-	int done = 0;
-	SDL_Event event;
 	SDL_Window* window;
 	SDL_Renderer* renderer;
+	SDL_Event event;
 
-	SDL_Init(SDL_INIT_EVERYTHING);
+	int done = 0;
 
 	window = SDL_CreateWindow("Project1", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 800, 600, 0);
 	renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
@@ -20,13 +19,29 @@ int main(int argc, char* argv[])
 			switch (event.type)
 			{
 			case SDL_WINDOWEVENT_CLOSE:
+				if (window)
+				{
+					SDL_DestroyWindow(window);
+					window = NULL;
+					done = 1;
+				}
 				break;
 			case SDL_KEYDOWN:
+				switch (event.key.keysym.sym)
+				{
+				case SDLK_ESCAPE:
+					done = 1;
+					break;
+				}
 				break;
 			case SDL_QUIT:
+				done = 1;
 				break;
 			}
 		}
+
+		SDL_RenderPresent(renderer);
+		SDL_Delay(100);
 	}
 
 	SDL_DestroyWindow(window);
