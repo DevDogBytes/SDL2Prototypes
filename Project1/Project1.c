@@ -59,7 +59,7 @@ void doRender(SDL_Renderer* renderer, Man* man)
 	SDL_SetRenderDrawColor(renderer, 255, 0, 255, 255);
 	SDL_RenderClear(renderer);
 	SDL_SetRenderDrawColor(renderer, 255, 127, 127, 255);
-	SDL_Rect rect = { man->x, man->y, 200, 200 };
+	SDL_Rect rect = { man->x, man->y, 10, 10 };
 	SDL_RenderFillRect(renderer, &rect);
 	SDL_RenderPresent(renderer);
 	SDL_Delay(100);
@@ -74,7 +74,7 @@ int main(int argc, char* argv[])
 	int done = 0;
 	Man man;
 
-	window = SDL_CreateWindow("Project1", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 800, 600, 0);
+	window = SDL_CreateWindow("Project1", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 256, 240, 0);
 	renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
 
 	man.x = 100;
