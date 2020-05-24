@@ -23,5 +23,8 @@
     <Image Include="spritesheet.gif">
       <Filter>Source Files</Filter>
     </Image>
+    <Image Include="toad.gif">
+      <Filter>Source Files</Filter>
+    </Image>
   </ItemGroup>
 </Project>
