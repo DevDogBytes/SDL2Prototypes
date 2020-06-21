@@ -143,11 +143,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Project1.c" />
+    <ClCompile Include="main.c" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="spritesheet.gif" />
-    <Image Include="toad.gif" />
+    <Image Include="king.gif" />
+    <Image Include="player_2048x8192.png" />
+    <Image Include="Sidewalk1_middle.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

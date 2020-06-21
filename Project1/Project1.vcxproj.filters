@@ -15,15 +15,18 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Project1.c">
+    <ClCompile Include="main.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="spritesheet.gif">
+    <Image Include="player_2048x8192.png">
       <Filter>Source Files</Filter>
     </Image>
-    <Image Include="toad.gif">
+    <Image Include="king.gif">
+      <Filter>Source Files</Filter>
+    </Image>
+    <Image Include="Sidewalk1_middle.png">
       <Filter>Source Files</Filter>
     </Image>
   </ItemGroup>
